@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formuário</title>
+    <link rel="stylesheet" href="form.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <p><strong>Não encontrou o que procurava?</strong></p>
+            <p>Preencha o formulário e retornaremos o contato.</p>
+            <fieldset id="container-form">
+                <legend>Seu formulário</legend>
+        
+                <div>
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" placeholder="Seu Nome" required>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Seu Email" onblur="verificaEmail(event)" required" title="Coloque um email válido">
+                    <P id="erro"></P>
+                </div>
+        
+                <div>
+                    <label for="tel">Telefone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="(xx) xxxx - xxxx" onkeyup="formataTelefone(event)" required>
+                </div>
+        
+                <div>
+                    <label for="date">Data de nascimento:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                
+                <div>
+                    <label for="cep">Cep:</label>
+                    <input type="number" name="cep" id="cep" placeholder="Seu CEP" onkeyup="getBairro()" maxlength="8" required>
+                </div>
+
+                <div>
+                    <input type="text" name="bairro" id="bairro" placeholder="Seu Bairro" required>
+                </div>
+
+                <fieldset>
+                    <legend>Autorização de contato</legend>
+                    <div>
+                        <label>Horário de contato</label>
+                        <select required>
+                            <option id="manha">Manhã</option>
+                            <option id="tarde">Tarde</option>
+                            <option id="noite">Noite</option>
+                        </select>
+                    </div>
+                    <div id="radios">
+                        <label>Sim
+                            <input type="radio" name="autorizaContato" id="sim" required>
+                        </label>
+                        <label>Não
+                            <input type="radio" name="autorizaContato" id="nao" required>
+                        </label>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>

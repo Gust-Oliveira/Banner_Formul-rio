@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    color:#F5DC00;
+    height: 100%;
+    /*background: url(Empreendimento.jpg);*/
+    background: linear-gradient(to right, rgb(0, 102, 255), rgb(32, 84, 161));
+}
+.container{
+    width: 500px;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 10px;
+
+}
+form{
+    width: 90%;
+}
+fieldset{
+    border:1px solid #F5DC00;
+    border-radius: 10px;
+    padding: 10px;
+}
+p{
+    text-align: center;
+}
+#container-form{
+    padding: 10px;
+}
+#container-form div{
+    margin:10px 0;   
+}
+#container-form div label{
+    display: block;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+#name, #email, #tel, #date, #cep, #bairro, input[type="submit"] {
+    box-sizing: border-box;
+    outline: none;
+    line-height: 1.3em;
+    border-radius: 5px;
+    color:white;
+    border: .5px solid #F5DC00;
+    padding: 5px;
+    width: 98%;
+    background: transparent;
+}
+#container-form fieldset{
+    display: flex;
+    justify-content: space-around;
+}
+select{
+    width: 130px;
+    height: 25px;
+    border: transparent;
+    border-radius: 5px;
+    outline: none;
+}
+#radios{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+#container-form div input::placeholder{
+    color: white;
+}
+#container-form fieldset{
+    margin-bottom: 10px;
+}
+input[type="submit"]{
+    width: 200px;
+    background-color: #F5DC00;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    width: 98%;
+    transition: .7s;
+    background-color: #F5DC00;
+}
+
+@media(max-width: 520px){
+    .container{
+        width: 97%;
+    }
+}
+.erro{
+    margin-top: 3px;
+    border-radius: 10px;
+    color: red;
+    background-color: rgb(255, 86, 86);
+    padding: 2px;
+    width: 80%;
+}
